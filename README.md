@@ -1,5 +1,5 @@
-<!-- https://code.visualstudio.com/docs/typescript/typescript-compiling -->
+`https://code.visualstudio.com/docs/typescript/typescript-compiling`
 
-<!-- tsc -p ./tsconfig.json --watch -->
+`tsc -p ./tsconfig.json --watch`
 
-<!-- node dist/user-service.js -->
+`node dist/user-service.js`
