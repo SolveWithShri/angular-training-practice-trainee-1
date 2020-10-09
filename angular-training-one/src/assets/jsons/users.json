@@ -1,0 +1,30 @@
+{
+    "type": "SUCCESS",
+    "data": [
+        {
+            "id": 1,
+            "name": "Shrikant",
+            "age": 27,
+            "phoneNumber": 9876543210,
+            "emailId": "shrikant_test@gmail.com",
+            "avatar": "/assets/user-avatar/1.png"
+        },
+        {
+            "id": 2,
+            "name": "Ashwini",
+            "age": 30,
+            "phoneNumber": 8881234900,
+            "emailId": "ashwini_test@gmail.com",
+            "avatar": "/assets/user-avatar/2.png"
+        },
+        {
+            "id": 3,
+            "name": "Mayank",
+            "age": 44,
+            "phoneNumber": 9872367999,
+            "emailId": "mayank_test@gmail.com",
+            "avatar": "/assets/user-avatar/3.png"
+        }
+    ],
+    "errors": []
+}

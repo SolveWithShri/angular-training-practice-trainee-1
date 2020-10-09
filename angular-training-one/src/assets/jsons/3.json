@@ -1,0 +1,12 @@
+{
+    "type": "SUCCESS",
+    "data": {
+        "id": 3,
+        "name": "Mayank",
+        "age": 44,
+        "phoneNumber": 9872367999,
+        "emailId": "mayank_test@gmail.com",
+        "avatar": "/assets/user-avatar/3.png"
+    },
+    "errors": []
+}

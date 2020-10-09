@@ -1,0 +1,12 @@
+{
+    "type": "SUCCESS",
+    "data": {
+        "id": 1,
+        "name": "Shrikant",
+        "age": 27,
+        "phoneNumber": 9876543210,
+        "emailId": "shrikant_test@gmail.com",
+        "avatar": "/assets/user-avatar/1.png"
+    },
+    "errors": []
+}

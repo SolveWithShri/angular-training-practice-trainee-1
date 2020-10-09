@@ -1,0 +1,12 @@
+{
+    "type": "SUCCESS",
+    "data": {
+        "id": 2,
+        "name": "Ashwini",
+        "age": 30,
+        "phoneNumber": 8881234900,
+        "emailId": "ashwini_test@gmail.com",
+        "avatar": "/assets/user-avatar/2.png"
+    },
+    "errors": []
+}
