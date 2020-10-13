@@ -1,0 +1,25 @@
+<div>
+    <label>Select User Id :: </label>
+    <select (change)="onUserIdChange($event.target.value)">
+        <option selected disabled>Pls select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+</div>
+
+<br/>
+<br/>
+
+<!-- <input type="text"/> -->
+
+<br/>
+<br/>
+
+<button (click)="toggleUserDetails()">Hide User Details</button>
+<br/>
+<br/>
+
+<div *ngIf="showUserDetails">
+    <app-user-details [userId]="userId"></app-user-details>
+</div>
