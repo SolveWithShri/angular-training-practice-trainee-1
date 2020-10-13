@@ -1,0 +1,26 @@
+<button (click)="clickMe()">Click Me!</button>
+<br/>
+<br/>
+<button (dblclick)="clickMeDouble()">Double Click Me!</button>
+
+<hr/>
+
+<label>Gender ::</label>
+<select (change)="onGenderChange($event.target.value)">
+    <option [disabled]="true" >Select ...</option>
+    <option>Male</option>
+    <option>Fe-Male</option>
+</select>
+
+<hr/>
+
+<label>Name ::</label>
+<input type="text" (input)="onNameChange($event.target.value)"
+    (change)="onNameChange2($event.target.value)"
+    (keyup)="onKeyUp($event.target.value)"
+/>
+
+
+<hr/><hr/>
+<button on-click="onClick()">Click Me!</button>
+
