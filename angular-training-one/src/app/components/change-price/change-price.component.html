@@ -1,0 +1,16 @@
+<section>
+    <button (click)="incPrice()">Up (10%)</button>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <button (click)="decPrice()">Down (10%)</button>
+</section>
+<br/>
+<section>
+    <form>
+        <input name="price" type="number" 
+            [(ngModel)]="acpPrice"/>
+    </form>
+    &nbsp;
+    <button (click)="onChange()">Change</button>
+</section>

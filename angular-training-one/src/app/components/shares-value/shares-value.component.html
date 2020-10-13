@@ -1,0 +1,9 @@
+<app-display-price [adpPrice]="price"></app-display-price>
+
+<br/>
+<hr/>
+<br/>
+
+<app-change-price [acpPrice]="price"
+    (acpChange)="onSharePriceChange($event)">
+</app-change-price>
