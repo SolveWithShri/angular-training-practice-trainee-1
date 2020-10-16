@@ -87,6 +87,12 @@
     <div>{{name}}</div>
 </div> -->
 
-<ng-container *ngFor="let name of names">
+<!-- <ng-container *ngFor="let name of names">
     <div>{{name}}</div>
+</ng-container> -->
+
+<ng-container *ngFor="let name of names">
+    <ng-container *ngIf="name">
+        <div>{{name}}</div>
+    </ng-container>
 </ng-container>
