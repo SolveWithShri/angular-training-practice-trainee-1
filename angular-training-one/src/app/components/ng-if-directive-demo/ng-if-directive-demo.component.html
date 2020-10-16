@@ -1,0 +1,119 @@
+<section>
+    <h2>Error -> {{isError}}</h2>
+
+    <br/>
+
+    <button (click)="setAsSuccess()">Success</button>
+    &nbsp;
+    &nbsp;
+    <button (click)="setAsError()">Error</button>
+</section>
+
+<hr/>
+
+<!-- <div *ngIf="isError">
+    This is required.
+</div> -->
+
+<!-- <div *ngIf="isError">
+    Hi from Error !
+</div>
+<div *ngIf="!isError">
+    Hi from Success !
+</div> -->
+
+
+<!-- <div class="error" *ngIf="isError else elseTemplateRef">
+    Hi from Error !
+</div>
+<ng-template #elseTemplateRef>
+    <div class="success">
+        Hi from Success !
+    </div>
+</ng-template> -->
+
+
+<!-- <div class="wrapper" *ngIf="isError 
+    then ifTemplateRef 
+    else elseTemplateRef"> 
+</div>
+<ng-template #ifTemplateRef>
+    <div class="error">
+        Hi from Error !
+    </div>
+</ng-template>
+<ng-template #elseTemplateRef>
+    <div class="success">
+        Hi from Success !
+    </div>
+</ng-template> -->
+
+
+<!-- <div class="error" *ngIf="isError as valueRef; else elseTemplateRef">
+    Hi from Error -> {{valueRef}} !
+</div>
+<ng-template #elseTemplateRef>
+    <div class="success">
+        Hi from Success !
+    </div>
+</ng-template> -->
+
+
+
+<!-- <div class="error" *ngIf="isError">
+    This is required.
+</div> -->
+
+<!-- <ng-template [ngIf]="isError">
+    <div class="error">
+        Hi from Error !
+    </div>
+</ng-template> -->
+
+
+<!-- <ng-template [ngIf]="isError">
+    <div class="error">
+        This is error.
+    </div>
+</ng-template>
+
+<ng-template [ngIf]="!isError">
+    <div class="success">
+        This is success.
+    </div>
+</ng-template> -->
+
+
+
+<!-- <ng-template [ngIf]="isError" [ngIfElse]="kuchBhi">
+    <div class="error">
+        Hi from Error !
+    </div>
+</ng-template>
+
+<ng-template #kuchBhi>
+    <div class="success">
+        Hi from Success !
+    </div>
+</ng-template> -->
+
+
+
+<!-- <div class="wrapper" *ngIf="isError then ifTemplateRef else elseTemplateRef"> 
+</div> -->
+
+<!-- <div class="placeholder">
+    <ng-container *ngIf="isError then ifTemplateRef; else elseTemplateRef">
+    </ng-container>
+</div>
+
+<ng-template #ifTemplateRef>
+    <div class="error">
+        Hi from Error !
+    </div>
+</ng-template>
+<ng-template #elseTemplateRef>
+    <div class="success">
+        Hi from Success !
+    </div>
+</ng-template> -->

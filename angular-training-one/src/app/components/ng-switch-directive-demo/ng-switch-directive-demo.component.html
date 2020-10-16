@@ -1,0 +1,38 @@
+<section>
+    <h2>Change status</h2>
+    <br/>
+
+    <button (click)="changeStatue(statusRef.Active)">
+        Active
+    </button>
+    &nbsp;
+    <button (click)="changeStatue(statusRef.InActive)">
+        In Active
+    </button>
+    &nbsp;
+    <button (click)="changeStatue(statusRef.Completed)">
+        Completed
+    </button>
+    &nbsp;
+</section>
+
+<section>
+    <h2>Status :: </h2>
+    <ng-container [ngSwitch]="status">
+        <span *ngSwitchCase="statusRef.Active" 
+            class="status status-active">
+            Active
+        </span>
+        <span *ngSwitchCase="statusRef.InActive" 
+            class="status status-in-active">
+            In Active
+        </span>
+        <span *ngSwitchCase="statusRef.Completed"
+            class="status status-completed">
+            Completed
+        </span>
+        <span *ngSwitchDefault>
+            Please select status !
+        </span>
+    </ng-container>
+</section>

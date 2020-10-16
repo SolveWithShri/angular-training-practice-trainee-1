@@ -1,0 +1,22 @@
+.status {
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.status-active {
+    background-color: lightyellow;
+    color: orangered;
+    border: solid 1px orangered;
+}
+
+.status-in-active {
+    background-color: lightgrey;
+    color: grey;
+    border: solid 1px grey;
+}
+
+.status-completed {
+    background-color: lightgreen;
+    color: green;
+    border: solid 1px green;
+}

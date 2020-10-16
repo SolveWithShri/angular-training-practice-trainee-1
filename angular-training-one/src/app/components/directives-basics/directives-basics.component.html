@@ -1,0 +1,78 @@
+<section>
+    <h2>Add Food</h2>
+    <br>
+    <form>
+        <div>
+            <label>Food Type :: </label>
+            <select name="food-type" [(ngModel)]="food.type">
+                <option value="Veg">Veg</option>
+                <option value="NonVeg">Non Veg</option>
+            </select>
+        </div>
+        <div>
+            <label>Food Name :: </label>
+            <input name="food-name" type="text" [(ngModel)]="food.name"/>
+        </div>
+    </form>
+
+    <br/>
+
+    <button (click)="addFood()" >Add Food</button>
+</section>
+
+<hr/>
+
+<section>
+    <h2>Foods :: </h2>
+
+    <br/>
+
+    <div>{{foods | json}}</div>
+
+    <!-- <ul>
+        <li>
+            <span style="color: red;">
+                {{foods && foods[0] && foods[0].type}}
+            </span>
+            &nbsp;
+            <span>
+                {{foods && foods[0] && foods[0].name}}
+            </span>
+        </li>
+        <li>
+            <span style="color: green;">
+                {{foods && foods[1] && foods[1].type}}
+            </span>
+            &nbsp;
+            <span>
+                {{foods && foods[1] && foods[1].name}}
+            </span>
+        </li>
+    </ul> -->
+</section>
+
+<!-- conditionally hide and show -> if -> *ngIf -->
+<!-- Iterate -> for -> *ngFor -->
+
+<!-- Conditionally style/class -> ngStyle/ngClass -->
+
+<section>
+    <ul *ngIf="foods.length > 0">
+        <li *ngFor="let food of foods; let i = index">
+            <span>
+                {{i + 1}}.
+            </span>
+            &nbsp;
+            <span [ngStyle]="{'color': food.type === 'Veg' ? 'green' : 'red'}">
+                {{food.type}}
+            </span>
+            &nbsp;
+            <span [ngClass]="{
+                'food-type-veg': food.type === 'Veg', 
+                'food-type-non-veg': food.type === 'NonVeg'
+            }">
+                {{food.name}}
+            </span>
+        </li>
+    </ul>
+</section>

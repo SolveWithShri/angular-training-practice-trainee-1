@@ -1,0 +1,71 @@
+<section>
+    <h2>Error -> {{isError}}</h2>
+
+    <br/>
+
+    <button (click)="setAsSuccess()">Success</button>
+    &nbsp;
+    &nbsp;
+    <button (click)="setAsError()">Error</button>
+</section>
+
+<hr/>
+
+<!-- <div [class.error]="isError"
+    [class.bolder]="isError"  
+    [class.success]="!isError"
+    [class.italic]="!isError">
+    This is required.
+</div> -->
+
+
+<!-- <div [ngClass]="isError ? 'error' : 'success'">
+    This is required.
+</div> -->
+
+
+<!-- <div [ngClass]="{
+    'error': isError,
+    'success': !isError,
+    'bolder': isError,
+    'italic': !isError
+}">
+    This is required.
+</div> -->
+
+
+<!-- <div [ngClass]="{
+    'error bolder': isError, 
+    'success italic': !isError
+}">
+    This is required.
+</div> -->
+
+
+<!-- <div [ngClass]="isError ? 'error bolder' : 'success italic'">
+    This is required.
+</div> -->
+
+<!-- <div [ngClass]="isError ? 
+    ['error', 'bolder'] : 
+    ['success', 'italic']">
+    This is required.
+</div> -->
+
+<!-- <div [ngClass]="isError ? 
+    ['error bolder'] : 
+    ['success italic']">
+    This is required.
+</div> -->
+
+<!-- <div [ngClass]="classInString">
+    This is required.
+</div> -->
+
+<!-- <div [ngClass]="classInArray">
+    This is required.
+</div> -->
+
+<div [ngClass]="classInObject">
+    This is required.
+</div>

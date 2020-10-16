@@ -1,0 +1,53 @@
+<section>
+    <h2>Error -> {{isError}}</h2>
+
+    <br/>
+
+    <button (click)="setAsSuccess()">Success</button>
+    &nbsp;
+    &nbsp;
+    <button (click)="setAsError()">Error</button>
+</section>
+
+<hr/>
+
+<!-- <div [style.color]="isError ? 'red' : 'green'">
+    This is required.
+</div> -->
+
+<!-- <div [style.color]="isError ? 'red' : 'green'"
+    [style.font-weight]="isError ? 'bolder' : 'bold'"
+    [style.font-style]="isError ? 'normal' : 'italic'">
+    This is required.
+</div> -->
+
+<!-- <div [ngStyle]="{
+    'color': isError ? 'red' : 'green',
+    'font-style': isError ? 'normal' : 'italic'
+}">
+    This is required.
+</div> -->
+
+<!-- <div [ngStyle]="{
+    'color': color,
+    'font-style': fontStyle
+}">
+    This is required.
+</div> -->
+
+<!-- <div [ngStyle]="styleInObject">
+    This is required.
+</div> -->
+<!-- 
+<div [style.font-size]="isError ? '20px' : '30px'">
+    This is required.
+</div> -->
+
+
+<!-- <div [style.font-size.px]="isError ? '20' : '30'">
+    This is required.
+</div> -->
+
+<div [style.font-size.%]="isError ? '40' : '90'">
+    This is required.
+</div>

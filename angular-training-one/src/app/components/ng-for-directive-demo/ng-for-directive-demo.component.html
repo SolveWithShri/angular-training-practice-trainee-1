@@ -1,0 +1,92 @@
+<section>
+    <h2>Add Food</h2>
+    <br>
+    <form>
+        <div>
+            <label>Food Type :: </label>
+            <select name="food-type" [(ngModel)]="foodFormValue.type">
+                <option value="Veg">Veg</option>
+                <option value="NonVeg">Non Veg</option>
+            </select>
+        </div>
+        <div>
+            <label>Food Name :: </label>
+            <input name="food-name" type="text" [(ngModel)]="foodFormValue.name"/>
+        </div>
+    </form>
+
+    <br/>
+
+    <button (click)="addFood()" >Add Food</button>
+</section>
+
+<button (click)="replace()">Replace Papad by Masala Papad</button>
+
+<hr/>
+
+<div>
+    <!-- {{foods | json}} -->
+</div>
+
+<!-- <ul>
+    <li *ngFor="let food of foods; 
+        index as i;
+        let c = count;
+        let isLast = last;
+        let isFirst = first;
+        let isEven = even;
+        let isOdd = odd;"
+        [class.food-italic]="isLast"
+        [class.food-bolder]="isFirst"
+        [class.food-even]="isEven"
+        [class.food-odd]="isOdd"
+        id="food-{{i}}" >
+            <span>[{{i + 1}} / {{c}}]</span>
+            &nbsp;
+            <span>
+                {{food.type}}
+            </span>
+            &nbsp;
+            <span>
+                {{food.name}}
+            </span>
+            &nbsp;
+            &nbsp;
+            <button (click)="deleteFood(i)">Delete</button>
+    </li>
+</ul> -->
+
+
+<hr/>
+<br/>
+
+<!-- <button (click)="replaceName()">Replace name</button>
+
+<div *ngFor="let name of names; index as i">
+    {{i}} :: {{name}}
+</div> -->
+
+
+<!-- <ul>
+    <li *ngFor="let food of foods; trackBy: trackByFun">
+        {{food.name}} - {{food.type}}
+    </li>
+</ul> -->
+
+<!-- <ng-template ngFor [ngForOf]="names" let-name let-i="index">
+    <div>
+        {{i}} -- {{name}}
+    </div>
+</ng-template> -->
+
+<!-- <ng-container *ngFor="let name of names">
+    <div>{{name}}</div>
+</ng-container> -->
+
+<!-- <div *ngFor="let name of names">
+    <div>{{name}}</div>
+</div> -->
+
+<ng-container *ngFor="let name of names">
+    <div>{{name}}</div>
+</ng-container>

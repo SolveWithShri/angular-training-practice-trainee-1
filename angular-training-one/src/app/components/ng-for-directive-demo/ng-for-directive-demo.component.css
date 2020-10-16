@@ -1,0 +1,15 @@
+.food-italic {
+    font-style: italic;
+}
+
+.food-bolder {
+    font-weight: bolder;
+}
+
+.food-even {
+    color: pink;
+}
+
+.food-odd {
+    color: blue;
+}
