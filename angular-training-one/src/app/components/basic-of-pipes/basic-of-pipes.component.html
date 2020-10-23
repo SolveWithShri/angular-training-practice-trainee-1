@@ -1,0 +1,18 @@
+Uppercase -> <h2>{{nameInLC}} -> {{toUpperCase(nameInLC)}}</h2>
+
+<h3>Uppercase via pipe -> {{ nameInLC | uppercase }}</h3>
+<br/>
+
+<h2>lowercase via pipe -> {{nameInUC | lowercase}}</h2>
+
+<hr/>
+
+<div>{{dob}}</div>
+
+<div>{{dob | date}}</div>
+
+<div>{{dob | date: 'shortDate'}}</div>
+
+<div>{{dob | date: 'dd/MMMM/yyyy hh:mm:ss': '+0430' : 'fr'}}</div>
+
+<!-- 23/10/2020 -->
