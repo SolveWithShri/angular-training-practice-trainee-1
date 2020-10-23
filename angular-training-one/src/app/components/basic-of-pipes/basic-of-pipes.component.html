@@ -13,6 +13,17 @@ Uppercase -> <h2>{{nameInLC}} -> {{toUpperCase(nameInLC)}}</h2>
 
 <div>{{dob | date: 'shortDate'}}</div>
 
-<div>{{dob | date: 'dd/MMMM/yyyy hh:mm:ss': '+0430' : 'fr'}}</div>
+<div>{{dob | date: 'dd/MMMM/yyyy hh:mm:ss': '+0430' : 'fr-FR'}}</div>
 
 <!-- 23/10/2020 -->
+<hr/>
+
+<div>{{100 | currency}}</div>
+
+<div>{{100 | currency : 'EUR'}}</div>
+
+<div>{{100 | currency : 'INR'}}</div>
+
+<hr/>
+
+<div>{{0.0075 | percent}}</div>
