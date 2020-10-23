@@ -1,0 +1,22 @@
+<div>
+    {{ 'shrikant' | fullName: 'adhav' }}
+</div>
+
+<div>
+    {{ (7500 | inrToUsd: 75) | currency }}
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let name of names | sort: nameSortOrder">
+            {{name}}
+        </li>
+    </ul>
+</div>
+
+<button (click)="changeSortOrder()">Change Sort Order</button>
+
+<button (click)="addName()">Add Name</button>
+
+
+<!-- <button (click)="sortNames()">Sort names</button> -->
