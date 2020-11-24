@@ -1,0 +1,135 @@
+<button (click)="getUserDetails()">Get User Details</button>
+
+<div *ngIf="!user else userFormTemplate">
+    Loading ...
+</div>
+<ng-template #userFormTemplate>
+    <form #userForm="ngForm">
+        <div>
+            <label for="email">Email :: </label>
+            <input [class.form-field-error]="emailRef.invalid"
+                id="email" type="text" name="email" 
+                [(ngModel)]="user.emailId" #emailRef="ngModel"
+                (ngModelChange)="onEmailChange($event)"
+                required
+                maxlength="25"
+                minlength="5"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+            <span>{{emailIdCharCount}}/25</span>
+            <div *ngIf="emailRef.invalid">
+                <span class="field-error" 
+                    *ngIf="emailRef.errors['required']">
+                    Email id is required.
+                </span>
+                <span class="field-error"
+                    *ngIf="emailRef.errors['minlength']">
+                    Minimum 5 chars. required for Email id.
+                </span>
+                <span class="field-error"
+                    *ngIf="!emailRef.errors['minlength'] && emailRef.errors['pattern']">
+                    Please provide valid email id (e.g. shri@adhav.com).
+                </span>
+            </div>
+        </div>
+        <br/>
+        <div>
+            <label for="address">Address :: </label>
+            <textarea id="address" name="address"
+                [(ngModel)]="user.address">
+            </textarea>
+        </div>
+        <br/>
+        <div>
+            <label for="food-type" [ngClass]="foodTypeClass">
+                Food type :: 
+            </label>
+            <select id="food-type" name="food-type"
+                [(ngModel)]="user.foodType"
+                (ngModelChange)="onFoodTypeChange($event)">
+                <option [value]="undefined" selected disabled>
+                    Please Select ...
+                </option>
+                <option [value]="foodType.Veg">{{foodType.Veg}}</option>
+                <option [value]="foodType.NonVeg">{{foodType.NonVeg}}</option>
+            </select>
+        </div>
+        <br/>
+        <div>
+            <label>Gender :: </label>
+            <input type="radio" id="male" name="gender" 
+                [value]="gender.Male" [(ngModel)]="user.gender">
+            <label for="male">{{gender.Male}}</label>
+            <input type="radio" id="female" name="gender"
+                [value]="gender.Female" [(ngModel)]="user.gender">
+            <label for="female">{{gender.Female}}</label>
+            <input type="radio" id="other" name="gender"
+                [value]="gender.Other" [(ngModel)]="user.gender">
+            <label for="other">{{gender.Other}}</label>
+        </div>
+        <br/>
+        <div>
+            <label>Vehicle :: </label>
+            <br/>
+            <input type="checkbox" id="vehicle1" name="bike" 
+                value="Bike" [(ngModel)]="user.vehicle.bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="car" 
+                value="Car" [(ngModel)]="user.vehicle.car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="boat"
+                value="Boat" [(ngModel)]="user.vehicle.boat">
+            <label for="vehicle3"> I have a boat</label><br>
+        </div>
+        <div>
+            <label for="age">Age :: </label>
+            <input id="age" type="number" name="age" 
+                [(ngModel)]="user.age"/>
+        </div>
+
+        <div>
+            <label for="pincode">
+                Pincode ::
+            </label>
+            <input id="pincode" type="text" name="pincode" 
+                [class.form-field-error]="pincodeRef.invalid"
+                [(ngModel)]="pincode"
+                [ngModelOptions]="{ standalone: true }"
+                #pincodeRef="ngModel"
+                minlength="3"
+                maxlength="7"
+            />
+        </div>
+        
+        <button type="submit"
+            [disabled]="userForm.invalid"
+            (click)="onSubmit()">
+            Submit
+        </button>
+        <!--  -->
+
+    <!-- <pre>{{userForm | json}}</pre> -->
+
+    </form>
+</ng-template>
+<br/>
+<br/>
+<br/>
+
+<button (click)="enableForm()">
+    Enable Form
+</button>
+<button (click)="disableForm()">
+    Disable Form
+</button>
+
+<br/>
+
+<button (click)="enableEmailFormControl()">
+    enableEmailFormControl
+</button>
+<button (click)="disableEmailFormControl()">
+    disableEmailFormControl
+</button>
+
+<!-- <pre>{{user | json}}</pre> -->

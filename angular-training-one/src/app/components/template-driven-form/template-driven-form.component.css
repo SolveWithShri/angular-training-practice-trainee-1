@@ -1,0 +1,21 @@
+.field-error {
+    color: red;
+}
+
+.form-field-error {
+    border: 1px solid red;
+}
+
+.form-field-error:focus {
+    outline: none;
+}
+
+.food-type-non-veg {
+    color: darkred;
+    background-color: lightsalmon;
+}
+
+.food-type-veg {
+    color: darkgreen;
+    background-color: lightgreen;
+}
