@@ -52,7 +52,7 @@ export class TemplateDrivenFormComponent {
     // Backend call
     setTimeout(() => {
       this.user = {
-        emailId: 'sh@a.com',
+        emailId: 'sha.com',
         address: 'Pune',
         foodType: undefined,
         gender: Gender.Male,

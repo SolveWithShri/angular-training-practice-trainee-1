@@ -7,7 +7,7 @@
     <form #userForm="ngForm">
         <div>
             <label for="email">Email :: </label>
-            <input [class.form-field-error]="emailRef.invalid"
+            <input [class.form-field-error]="emailRef.touched && emailRef.invalid"
                 id="email" type="text" name="email" 
                 [(ngModel)]="user.emailId" #emailRef="ngModel"
                 (ngModelChange)="onEmailChange($event)"
@@ -17,7 +17,7 @@
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             />
             <span>{{emailIdCharCount}}/25</span>
-            <div *ngIf="emailRef.invalid">
+            <div *ngIf="emailRef.touched && emailRef.invalid">
                 <span class="field-error" 
                     *ngIf="emailRef.errors['required']">
                     Email id is required.
