@@ -1,0 +1,37 @@
+<!-- <app-login></app-login>
+
+<app-registration></app-registration> -->
+
+<header>User Management</header>
+
+<nav>
+    <ul class="nav-links">
+        <li>
+            <a routerLink="/" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">
+                Home
+            </a>
+        </li>
+        <li>
+            <a routerLink="/login" routerLinkActive="active">
+                Login
+            </a>
+        </li>
+        <li>
+            <a routerLink="/registration" routerLinkActive="active">
+                Registration
+            </a>
+        </li>
+        <li>
+            <a routerLink="/user-list" routerLinkActive="active">
+                User List
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<footer>@Copyright | 2020</footer>

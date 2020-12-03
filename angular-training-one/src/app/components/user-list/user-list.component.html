@@ -1,0 +1,19 @@
+<table border="1">
+    <thead>
+        <th>Sr. No.</th>
+        <th>Name</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i = index">
+            <td>{{i + 1}}</td>
+            <td>
+                <a routerLink="/user-details/{{user.id}}"
+                    [queryParams]="{emailId: user.emailId}">
+                    {{user.name}}
+                </a>
+            </td>
+            <td>{{user.emailId}}</td>
+        </tr>
+    </tbody>
+</table>
